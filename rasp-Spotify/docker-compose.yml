@@ -1,0 +1,10 @@
+version: "3.4"
+services:
+  rpi-spotify:
+    image: svanscho/rpi-spotify
+    devices: 
+      - /dev/snd:/dev/snd
+    network_mode: host
+    restart: always
+    environment:
+      - SPOTIFY_NAME=Pitify
